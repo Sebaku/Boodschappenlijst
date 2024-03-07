@@ -15,7 +15,7 @@
             <th>Subtotaal</th>
           </tr>
         <tr>
-            <td>Brood</td>
+            <td>Brood <? echo $product1?></td>
             <td class="productPrice">1.00</td>
             <td><input type="number" value="0" class="productQuantity"></td>
             <td class="productTotalCost">0.00</td>
@@ -38,6 +38,16 @@
             <td><input type="number" value="0" class="productQuantity"></td>
             <td class="productTotalCost">0.00</td>
         </tr>
+        <?php 
+            foreach ($products as $product){
+                echo "<tr>";
+                echo "<td>" . $product['naam'] . "</td>";
+                echo "<td>" . $product['prijs'] . "</td>";
+                echo "<td>" . $product['aantal'] . "</td>";
+                echo "<td>" . (float)$product['aantal']*(float)$product['prijs'] . "</td>";
+                echo "</tr>";
+            }
+        ?>
         <tr>
             <td colspan="3">Totaal</td>
             <td class="totalCost">0.00</td>
