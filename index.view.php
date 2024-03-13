@@ -39,12 +39,12 @@
             <td class="productTotalCost">0.00</td>
         </tr>
         <?php 
-            foreach ($products as $product){
+            foreach ($productsDB as $product){
                 echo "<tr>";
-                echo "<td>" . $product['naam'] . "</td>";
-                echo "<td>" . $product['prijs'] . "</td>";
-                echo "<td>" . $product['aantal'] . "</td>";
-                echo "<td>" . (float)$product['aantal']*(float)$product['prijs'] . "</td>";
+                echo "<td>" . $product->get_name() . "</td>";
+                echo "<td>" . $product->get_amount() . "</td>";
+                echo "<td>" . $product->get_price() . "</td>";
+                echo "<td>" . (float)$product->get_amount()*(float)$product->get_price() . "</td>";
                 echo "</tr>";
             }
         ?>
