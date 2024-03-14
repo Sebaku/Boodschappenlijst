@@ -5,10 +5,10 @@ require "functions.php";
 
 $productsDB = []; 
 
-$res = $query->selectAll('products');
+$res = $query->selectAll('groceries');
 
 foreach($res as $k=>$row) {
-    array_push($productsDB,new Product($row->name, $row->amount, $row->price));
+    array_push($productsDB,new Product($row->product, $row->quantity, $row->price));
 }
 
 require "index.view.php";
