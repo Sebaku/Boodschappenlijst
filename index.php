@@ -11,5 +11,5 @@ foreach($res as $k=>$row) {
     array_push($productsDB,new Product($row->product, $row->quantity, $row->price));
 }
 
-require "index.view.php";
+require "views/index.view.php";
 ?>

@@ -42,8 +42,8 @@
             foreach ($productsDB as $product){
                 echo "<tr>";
                 echo "<td>" . $product->get_name() . "</td>";
-                echo "<td>" . $product->get_amount() . "</td>";
                 echo "<td>" . $product->get_price() . "</td>";
+                echo "<td>" . $product->get_amount() . "</td>";
                 echo "<td>" . (float)$product->get_amount()*(float)$product->get_price() . "</td>";
                 echo "</tr>";
             }
