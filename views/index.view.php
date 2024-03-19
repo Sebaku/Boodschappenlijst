@@ -53,6 +53,7 @@
             <td class="totalCost">0.00</td>
         </tr>
     </table>
+    <a href="create.php">Voeg product toe</a>
     <script src="script.js"></script>
 </body>
 </html>
