@@ -1,5 +1,4 @@
 <?php
-//$query = require 'core/bootstrap.php';
 require "Product.php";
 
 $productsDB = []; 

@@ -7,6 +7,9 @@
     <title>Boodschappenlijst</title>
 </head>
 <body>
+    <nav>
+        <?php require('partials/nav.php');?>
+    </nav>
     <table id="table1">
         <tr>
             <th>Product</th>
@@ -53,7 +56,6 @@
             <td class="totalCost">0.00</td>
         </tr>
     </table>
-    <a href="create.php">Voeg product toe</a>
     <script src="script.js"></script>
 </body>
 </html>

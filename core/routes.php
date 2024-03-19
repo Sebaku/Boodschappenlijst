@@ -1,6 +1,6 @@
 <?php
 
 $router->define( [
-    '' => 'controller/index.php',
+    '' => 'controllers/index.php',
     'poep' => 'controllers/create.php'
 ]);

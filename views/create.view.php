@@ -7,5 +7,4 @@
     <title>Voeg boodschappen toe</title>
 </head>
 <body>
-    <a href="index.php">Ga terug</a>
 </body>
