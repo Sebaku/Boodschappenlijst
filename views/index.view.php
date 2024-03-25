@@ -8,43 +8,22 @@ require('partials/header.php');?>
             <th>Aantal</th>
             <th>Subtotaal</th>
           </tr>
-        <tr>
-            <td>Brood <? echo $product1?></td>
-            <td class="productPrice">1.00</td>
-            <td><input type="number" value="0" class="productQuantity"></td>
-            <td class="productTotalCost">0.00</td>
-        </tr>
-        <tr>
-            <td>Broccoli</td>
-            <td class="productPrice">0.99</td>
-            <td><input type="number" value="0" class="productQuantity"></td>
-            <td class="productTotalCost">0.00</td>
-        </tr>
-        <tr>
-            <td>Krentebollen</td>
-            <td class="productPrice">1.20</td>
-            <td><input type="number" value="0" class="productQuantity"></td>
-            <td class="productTotalCost">0.00</td>
-        </tr>
-        <tr>
-            <td>Noten</td>
-            <td class="productPrice">2.99</td>
-            <td><input type="number" value="0" class="productQuantity"></td>
-            <td class="productTotalCost">0.00</td>
-        </tr>
         <?php 
+            $total = 0;
             foreach ($productsDB as $product){
+                $subtotal = (float)$product->get_amount()*(float)$product->get_price();
                 echo "<tr>";
                 echo "<td>" . $product->get_name() . "</td>";
                 echo "<td>" . $product->get_price() . "</td>";
                 echo "<td>" . $product->get_amount() . "</td>";
-                echo "<td>" . (float)$product->get_amount()*(float)$product->get_price() . "</td>";
+                echo "<td>" . $subtotal . "</td>";
                 echo "</tr>";
+                $total = $total + $subtotal;
             }
         ?>
         <tr>
             <td colspan="3">Totaal</td>
-            <td class="totalCost">0.00</td>
+            <td class="totalCost"><?php echo $total ?></td>
         </tr>
     </table>
     <script src="script.js"></script>
