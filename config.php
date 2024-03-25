@@ -6,6 +6,8 @@ return [
         'username' => 'root',
         'password' => 'root',
         'name' => 'shoppinglist',
-        'options' => []
+        'options' => [
+          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]
   ] 
 ];

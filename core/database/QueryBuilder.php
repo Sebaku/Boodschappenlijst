@@ -16,14 +16,13 @@ class QueryBuilder{
             'insert into %s (%s) values (%s)',
             $table,
             implode(', ', array_keys($parameters)),
-            ':' . implode(' :' array_keys($parameters))
+            ':' . implode(', :', array_keys($parameters))
         );
-            die(var_dump$sql));
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute($parameters);
         } catch (Exception $e) {
-            die('Does not work')
+            die('Does not work');
         }
     }
 }
