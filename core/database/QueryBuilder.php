@@ -22,7 +22,7 @@ class QueryBuilder{
             $statement = $this->pdo->prepare($sql);
             $statement->execute($parameters);
         } catch (Exception $e) {
-            die('Does not work');
+            die($e->getMessage());
         }
     }
 }
