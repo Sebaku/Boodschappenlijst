@@ -1,2 +1,2 @@
 <a href="/">Home</a>
-<a href="poep">Voeg product toe</a>
+<a href="create">Voeg product toe</a>

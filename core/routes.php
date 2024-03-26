@@ -7,5 +7,5 @@
 // ]);
 
 $router->get('', 'controllers/index.php');
-$router->get('poep', 'controllers/create.php');
+$router->get('create', 'controllers/create.php');
 $router->post('created', 'controllers/created.php');
